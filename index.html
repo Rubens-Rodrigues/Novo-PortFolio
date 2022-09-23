@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animacao.css">
+    <title>Port Folio Rubens Rodrigues</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#">Rubens Rodrigues</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+        <a id="whats-topo"  href="https://wa.me/558699301002" target="_blank"><img src="./img/whatsapp.png" alt="Whatsapp"></a>
+        <section class="topo" id="inicio">
+            <div>
+                <h1>Front-end</h1>
+                <h2>WEB Developer</h2>
+                <p>Desenvolvendo a melhor experiência de <em style="color: #ab1e2f;">transformação digital</em> para você empreendedor.</p>
+            </div>
+        </section>
+        <section id="sobre" class="sobre">
+            <img class="init-hidden" src="./img/perfil2.png" alt="Foto perfil">
+            <div>
+                <h2 class="init-hidden" >SOBRE MIM</h2>
+                <p class="init-hidden">
+                    Minhas habilidades estão na área da <em style="color: #ab1e2f;">comunicação e no desenvolvimento</em> 
+                    de relacionamentos e projetos, assim como na execução de
+                    tarefas que exijam detalhismo e precisão. Possuo assertividade na condução de pontos de vista e qualidades intuitivas
+                    para criar e me adaptar a novas situações. Formado em Analise e <em style="color: #ab1e2f;">Desenvolvimento de Sistemas,</em> 
+                    atuo a pouco mais de um ano como Desenvolvedor Web Front-end, procurando sempre utilazar do que a de mais moderno
+                    para auxiliar na experiência do emprendedor  e das empresas na busca pela <em style="color: #ab1e2f;">transformação digital</em>.
+                </p>
+            </div>
+        </section>
+        <section class="projetos" id="projetos">
+            <h2 class="init-hidden">PROJETOS</h2>
+            <main>
+                <div class="init-hidden">
+                    <img src="img/positive.JPG" alt="Imagem">
+                    <p>Site institucional para empresa de consultoria</p>
+                    <button><a href="https://www.positiveempresarial.com.br/" target="_blank">VISUALIZAR</a></button>
+                </div>   
+                <div class="init-hidden"> 
+                    <img src="img/thitattoo.JPG" alt="Imagem">
+                    <p>Pagina para estúdio de tatuagem</p>
+                    <button><a href="#" target="_blank">Finalizando</a></button>
+                </div>
+                <div class="init-hidden">
+                    <img src="img/linkbio.JPG" alt="Imagem">
+                    <p>Organizador de links</p>
+                    <button><a href="https://links.positiveempresarial.com.br/" target="_blank">VISUALIZAR</a></button>
+                </div>
+                <div class="init-hidden">
+                    <img src="img/positivemulher.JPG" alt="Imagem">
+                    <p>Pagina para venda de Planner</p>
+                    <button><a href="https://plannerpm.positiveempresarial.com.br/" target="_blank">VISUALIZAR</a></button>
+                </div>
+                <div class="init-hidden">
+                    <img src="img/ebook.JPG" alt="Imagem">
+                    <p>Pagina para venda de Ebook</p>
+                    <button><a href="#" target="_blank">Finalizando</a></button>
+                </div>                
+            </main>
+        </section>
+        <h2 id="contatos">CONTATOS</h2>
+        <footer class="footer init-hidden">
+            <form class="form" action="./contact.php" method="POST">
+                    <div class="inputBox">
+                        Digite seu nome
+                        <br>
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        Digite um email válido
+                        <br>
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        Deixe sua mensagem
+                        <br>
+                        <input type="text" name="mensagem" id="mensagem" class="inputUser" required>
+                    </div>
+                    <br>
+                    <input type="submit" name="submit" id="submit">
+            </form>
+            <div class="midias">
+                <a href="https://wa.me/558699301002" target="_blank"><img src="./img/whatsapp1.png" alt="Whatsapp"></a> 
+                <a href="https://www.linkedin.com/in/rubens-rodrigues-oficial" target="_blank"><img src="./img/linkedin.png" alt="Linkedin"></a> 
+                <a href="https://github.com/Rubens-Rodrigues" target="_blank"><img src="./img/github.png" alt="GitHub"></a>
+                <a href="https://www.instagram.com/rubensrodriguesoficial/" target="_blank"><img src="./img/instagram.png" alt="Instagran"></a>
+            </div>
+            <div class="texto">
+                <p>"A <em style="color: #ab1e2f;">sabedoria</em> consiste em compreender que o tempo <br> dedicado ao trabalho nunca é perdido."</p>
+                <p id="copy">2022 &copy; Todos os direitos reservados. Desenvolvido por <em style="color: #ab1e2f;">Rubens Rodrigues</em></p>
+            </div>
+        </footer>  
+        
+        
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
