@@ -36,7 +36,7 @@ nav {
     height: 8vh;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav-list {
@@ -197,7 +197,6 @@ footer {
     padding: 20px;
 }
 
-
 .midias {
     display: flex;
     flex-direction: column;
@@ -277,6 +276,7 @@ form {
     border-radius: 50%;
     box-shadow: 2px 2px 8px #ab1e2f;
     transition: all 0.5s;
+    z-index: 1;
 }
 #whats-topo img:hover {
     -webkit-transform: scale(1.1);
