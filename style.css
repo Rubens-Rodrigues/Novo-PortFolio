@@ -71,7 +71,6 @@ nav {
     background-image: url(img/fundo2.png);
     background-size: cover;
     background-attachment: fixed;
-    background-position: right top;
 }
 
 .topo div {
@@ -262,30 +261,6 @@ form {
     transform: scale(1.1);
 }
 
-.container-contato {
-    width: 500px;
-    height: 80px;
-    padding: 10px;
-    border: 3px solid #28030a;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    display: flex;
-    margin-top: 50px;
-    margin-left: 25%;
-    margin-right: 25%;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.container-contato a {
-    color: white;
-    font-size: 15px;
-    margin-top: 15px;
-    border: 1px solid #28030a;
-    border-radius: 10px;
-}
-
 #whats-topo {
     width: 95%;
     position: absolute;
@@ -350,7 +325,7 @@ form {
 
     .topo {
         height: 60vh;
-        background-image: url(img/fundoMobile.png);
+        background-position: 60%;
     }
 
     .topo div {
@@ -484,7 +459,7 @@ form {
 
 
 
-
+/*nav bar*/
 .nav-list.active {
     transform: translateX(0);
 }
@@ -497,4 +472,32 @@ form {
 }
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);    
+}
+
+
+/* scroll*/
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[date-anime="down"] {
+    transform: translate3d(0, -100%, 0);
+}
+
+[date-anime="up"] {
+    transform: translate3d(0, 100px, 0);
+}
+
+[date-anime="left"] {
+    transform: translate3d(-100%, 0, 0);
+}
+
+[date-anime="right"] {
+    transform: translate3d(50%, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0,0,0);
 }

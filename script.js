@@ -1,3 +1,4 @@
+//nav bar
 class MobileNavbar {
     constructor(mobileMenu, navList, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);
@@ -43,17 +44,23 @@ mobileNavbar.init();
 
 
 
+//animacao scroll
+const item = document.querySelectorAll("[data-anime]");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    if (entries[0].intersectionRatio >= 0.5) {
-      entries[0].target.classList.add("init-hidden-off");
+const animeScroll = () => {
+  const windowTop = window.pageYOffset + window.innerHeight * 0.60;
+
+  item.forEach((element) => {
+    if (windowTop > element.offsetTop) {
+      element.classList.add("animate");
+    } else {
+      element.classList.remove("animate")
     }
-  },
-  {
-    threshold: [0.5],
-  }
-);
-Array.from(document.querySelectorAll(".init-hidden")).forEach((element) => {
-  observer.observe(element);
+  });
+};
+
+animeScroll();
+
+window.addEventListener("scroll", ()=>{
+  animeScroll();
 });
