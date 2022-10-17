@@ -88,6 +88,7 @@ h1 {
     color:#ab1e2f;
     font-size: 50px;
     margin-left: -4px;
+    margin-bottom: 8px;
 
 }
 .topo p {
@@ -274,7 +275,6 @@ form {
     height: 50px;
     position: fixed;
     border-radius: 50%;
-    box-shadow: 2px 2px 8px #ab1e2f;
     transition: all 0.5s;
     z-index: 1;
 }
