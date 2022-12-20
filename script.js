@@ -1,64 +1,66 @@
 //nav bar
 class MobileNavbar {
-    constructor(mobileMenu, navList, navLinks) {
-        this.mobileMenu = document.querySelector(mobileMenu);
-        this.navList = document.querySelector(navList);
-        this.navLinks = document.querySelectorAll(navLinks);
-        this.activeClass = "active";
+  constructor(mobileMenu, navList, navLinks) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.activeClass = "active";
 
-        this.handleClick = this.handleClick.bind(this);
-    }
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-    animateLinks() {
-        this.navLinks.forEach((link, index) => {
-            link.style.animation
-                ? (link.style.animation = "")
-                : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
-        });
-    }
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+    });
+  }
 
-    handleClick() {
-        this.navList.classList.toggle(this.activeClass);
-        this.mobileMenu.classList.toggle(this.activeClass);
-        this.animateLinks();
-    }
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.mobileMenu.classList.toggle(this.activeClass);
+    this.animateLinks();
+  }
 
-    addClickEvent() {
-        this.mobileMenu.addEventListener("click", this.handleClick);
-    }
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+  }
 
-    init() {
-        if (this.mobileMenu) {
-            this.addClickEvent();
-        }
-        return this;
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
     }
+    return this;
+  }
 }
 
 const mobileNavbar = new MobileNavbar(
-    ".mobile-menu",
-    ".nav-list",
-    ".nav-list li",
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li"
 );
 mobileNavbar.init();
 
-
-
 //animacao scroll
-const item = document.querySelectorAll("[data-anime]");
 
-const animeScroll = () => {
-  const windowTop = window.pageYOffset + window.innerHeight * 0.60;
+function initAnimeScroll() {
+  const sections = document.querySelectorAll('.js-scroll, .js-scroll2');
+  const windowMetade = window.innerHeight * 1;
 
-  item.forEach((element) => {
-    if (windowTop > element.offsetTop) {
-      element.classList.add("animate");
-    } 
-  });
-};
-
-animeScroll();
-
-window.addEventListener("scroll", ()=>{
-  animeScroll();
-});
+  function animeScroll() {
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionViseble = sectionTop - windowMetade < 0;
+      if (sectionViseble) {
+        section.classList.add("ativo");
+      } else {
+        section.classList.remove("ativo");
+      }
+    });
+  }
+  animeScroll()
+  
+  window.addEventListener("scroll", animeScroll)
+}
+initAnimeScroll();
